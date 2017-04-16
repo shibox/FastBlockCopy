@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBlockCopy", "FastBlockCopy\FastBlockCopy.csproj", "{6D04FB4E-0262-4ADE-A460-1D43B2C9D395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBlockCopyBenchmarks", "FastBlockCopyBenchmarks\FastBlockCopyBenchmarks.csproj", "{3D7F0E5E-8053-4CDF-88FA-89A655005D25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6D04FB4E-0262-4ADE-A460-1D43B2C9D395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D04FB4E-0262-4ADE-A460-1D43B2C9D395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D04FB4E-0262-4ADE-A460-1D43B2C9D395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D7F0E5E-8053-4CDF-88FA-89A655005D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7F0E5E-8053-4CDF-88FA-89A655005D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7F0E5E-8053-4CDF-88FA-89A655005D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7F0E5E-8053-4CDF-88FA-89A655005D25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
