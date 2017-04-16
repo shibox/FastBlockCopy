@@ -1,0 +1,41 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ include file="GenerationConfig.ttinclude" #><# GenerateCopyrightHeader(); #>
+
+
+using System.Runtime.InteropServices;
+using System;
+
+namespace FastBlockCopy
+{
+    public static partial class FastBuffer
+    {
+
+	<#
+    foreach (var src in supportedTypes)
+    {
+		foreach (var dst in supportedTypes)
+		{
+#>
+		
+			public unsafe static void BlockCopy(this <#= src.Name #>[] src, int srcOffset, <#= dst.Name #>[] dst, int dstOffset, int count)
+			{
+				fixed (<#= src.Name #>* srcOrigin = &src[dstOffset])
+				fixed (<#= dst.Name #>* dstOrigin = &dst[dstOffset])
+				{
+					UnsafeByteCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
+				}
+			}
+		<#
+		}
+    }
+#>
+
+    }
+}

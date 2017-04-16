@@ -49,11 +49,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FastBuffer.cs" />
-    <Compile Include="FastBufferByte.cs" />
+    <Compile Include="FastBufferWrap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FastBufferWrap.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="GenerationConfig.ttinclude" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FastBufferWrap.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FastBufferWrap.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

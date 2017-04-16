@@ -16,17 +16,12 @@ namespace FastBlockCopyBenchmarks
         public static void Run()
         {
             Stopwatch w = Stopwatch.StartNew();
-            for (int n = 1000-1; n < 1000; n++)
+            for (int i = 0; i < 10000000; i++)
             {
-                for (int i = 0; i < 10000000; i++)
-                {
-                    //bufferFrom.BlockCopyUnCheck(0, bufferTo, 0, n);
-                    bufferFrom.BlockCopyUnCheckV2(0, bufferTo, 0, 128);
-                    //bufferFrom.BlockCopy(0, bufferTo, 0, n);
-                    //Buffer.BlockCopy(bufferFrom, 0, bufferTo, 0, 128);
-                }
+                //bufferFrom.BlockCopy(0, bufferTo, 0, 16);
+                Buffer.BlockCopy(bufferFrom, 0, bufferTo, 0, 16);
             }
-            
+
             w.Stop();
             Console.WriteLine($"cost:{w.ElapsedMilliseconds}");
             Console.WriteLine(bufferTo);
