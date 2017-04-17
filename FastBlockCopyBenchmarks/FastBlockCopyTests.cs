@@ -18,8 +18,8 @@ namespace FastBlockCopyBenchmarks
             Stopwatch w = Stopwatch.StartNew();
             for (int i = 0; i < 10000000; i++)
             {
-                //bufferFrom.BlockCopy(0, bufferTo, 0, 16);
-                Buffer.BlockCopy(bufferFrom, 0, bufferTo, 0, 16);
+                bufferFrom.BlockCopy(0, bufferTo, 0, 256);
+                //Buffer.BlockCopy(bufferFrom, 0, bufferTo, 0, 256);
             }
 
             w.Stop();
