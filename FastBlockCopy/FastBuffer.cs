@@ -25,7 +25,7 @@ namespace FastBlockCopy
         /// <param name="src"></param>
         /// <param name="count"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe static void UnsafeBlockCopy(byte* dst, byte* src, int count)
+        public unsafe static void UnsafeBlockCopy(byte* src, byte* dst, int count)
         {
             SMALLTABLE:
             switch (count)
@@ -89,8 +89,8 @@ namespace FastBlockCopy
                     break;
             }
 
-            var lpSrc = (long*)src;
-            var ldSrc = (long*)dst;
+            long* lpSrc = (long*)src;
+            long* ldSrc = (long*)dst;
             while (count >= 64)
             {
                 *(ldSrc + 0) = *(lpSrc + 0);
@@ -104,8 +104,8 @@ namespace FastBlockCopy
                 if (count == 64)
                     return;
                 count -= 64;
-                lpSrc += 64;
-                ldSrc += 64;
+                lpSrc += 8;
+                ldSrc += 8;
             }
             if (count > 32)
             {
@@ -114,16 +114,16 @@ namespace FastBlockCopy
                 *(ldSrc + 2) = *(lpSrc + 2);
                 *(ldSrc + 3) = *(lpSrc + 3);
                 count -= 32;
-                lpSrc += 32;
-                ldSrc += 32;
+                lpSrc += 4;
+                ldSrc += 4;
             }
             if (count > 16)
             {
                 *(ldSrc + 0) = *(lpSrc + 0);
                 *(ldSrc + 1) = *(lpSrc + 1);
                 count -= 16;
-                lpSrc += 16;
-                ldSrc += 16;
+                lpSrc += 2;
+                ldSrc += 2;
             }
             src = (byte*)lpSrc;
             dst = (byte*)ldSrc;

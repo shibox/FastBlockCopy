@@ -13,7 +13,8 @@ namespace FastBlockCopyBenchmarks
         static void Main(string[] args)
         {
             //BenchmarkRunner.Run<FastBlockCopyBenchmark>();
-            FastBlockCopyTests.Run();
+            //FastBlockCopyTests.Run();
+            FastBlockCopyTests.TestCopy();
             Console.ReadLine();
         }
     }
