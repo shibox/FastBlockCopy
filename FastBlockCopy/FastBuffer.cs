@@ -25,7 +25,7 @@ namespace FastBlockCopy
         /// <param name="src"></param>
         /// <param name="count"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe static void UnsafeByteCopy(byte* dst, byte* src, int count)
+        public unsafe static void UnsafeBlockCopy(byte* dst, byte* src, int count)
         {
             SMALLTABLE:
             switch (count)
@@ -125,56 +125,10 @@ namespace FastBlockCopy
                 lpSrc += 16;
                 ldSrc += 16;
             }
+            src = (byte*)lpSrc;
+            dst = (byte*)ldSrc;
             goto SMALLTABLE;
         }
-
-        #region old
-
-        //public unsafe static void BlockCopy(this byte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
-        //{
-        //    if (Vector.IsHardwareAccelerated)
-        //    {
-        //        if (count > 512 + 64)
-        //        {
-        //            Array.Copy(src, srcOffset, dst, dstOffset, count);
-        //            return;
-        //        }
-        //        if (src == null) throw new ArgumentNullException(nameof(src));
-        //        if (dst == null) throw new ArgumentNullException(nameof(dst));
-        //        if (count < 0 || srcOffset < 0 || dstOffset < 0) throw new ArgumentOutOfRangeException(nameof(count));
-        //        if (count == 0) return;
-        //        if (srcOffset + count > src.Length) throw new ArgumentException(nameof(src));
-        //        if (dstOffset + count > dst.Length) throw new ArgumentException(nameof(dst));
-
-        //        //BlockCopyUnCheck(src, srcOffset, dst, dstOffset, count);
-        //        BlockCopyUnCheckV2(src, srcOffset, dst, dstOffset, count);
-        //    }
-        //    else
-        //    {
-        //        Array.Copy(src, srcOffset, dst, dstOffset, count);
-        //        return;
-        //    }
-        //}
-
-        //public unsafe static void BlockCopy(this byte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
-        //{
-        //    fixed (byte* srcOrigin = &src[dstOffset])
-        //    fixed (sbyte* dstOrigin = &dst[dstOffset])
-        //    {
-        //        UnsafeByteCopy(srcOrigin, (byte*)dstOrigin, count);
-        //    }
-        //}
-
-        //public unsafe static void BlockCopy(this byte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
-        //{
-        //    fixed (byte* srcOrigin = &src[dstOffset])
-        //    fixed (byte* dstOrigin = &dst[dstOffset])
-        //    {
-        //        UnsafeByteCopy(srcOrigin, dstOrigin, count);
-        //    }
-        //}
-
-        #endregion
 
     }
 }

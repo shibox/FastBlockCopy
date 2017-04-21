@@ -24,13 +24,36 @@ namespace FastBlockCopy
 		{
 #>
 		
-			public unsafe static void BlockCopy(this <#= src.Name #>[] src, int srcOffset, <#= dst.Name #>[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this <#= src.Name #>[] src, int srcOffset, <#= dst.Name #>[] dst, int dstOffset, int count)
 			{
-				fixed (<#= src.Name #>* srcOrigin = &src[dstOffset])
+				fixed (<#= src.Name #>* srcOrigin = &src[srcOffset])
 				fixed (<#= dst.Name #>* dstOrigin = &dst[dstOffset])
 				{
-					UnsafeByteCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
+					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
+			}
+		<#
+		}
+    }
+#>
+
+<#
+    foreach (var src in supportedTypes)
+    {
+		foreach (var dst in supportedTypes)
+		{
+#>
+		
+			public unsafe static void BlockCopy(this <#= src.Name #>[] src, int srcOffset, <#= dst.Name #>[] dst, int dstOffset, int count)
+			{
+				if (src == null) throw new ArgumentNullException(nameof(src));
+		        if (dst == null) throw new ArgumentNullException(nameof(dst));
+		        if (count < 0 || srcOffset < 0 || dstOffset < 0) throw new ArgumentOutOfRangeException(nameof(count));
+		        if (count == 0) return;
+		        if (srcOffset + count > src.Length) throw new ArgumentException(nameof(src));
+		        if (dstOffset + count > dst.Length) throw new ArgumentException(nameof(dst));
+
+				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 		<#
 		}
