@@ -15,6 +15,22 @@ namespace FastBlockCopyBenchmarks
 
         public static void Run()
         {
+            byte[] from = new byte[1024];
+            byte[] to = new byte[1024];
+            Stopwatch w = Stopwatch.StartNew();
+            for (int i = 0; i < 10000000; i++)
+            {
+                from.UnsafeBlockCopy(0, to, 0, 32);
+                //Buffer.BlockCopy(from, 0, to, 0, 32);
+            }
+            w.Stop();
+            Console.WriteLine($"cost:{w.ElapsedMilliseconds}");
+            Console.WriteLine(to);
+            
+        }
+
+        public static void RunRandom()
+        {
             Stopwatch w = Stopwatch.StartNew();
             for (int i = 0; i < 10000000; i++)
             {
@@ -25,7 +41,7 @@ namespace FastBlockCopyBenchmarks
             w.Stop();
             Console.WriteLine($"cost:{w.ElapsedMilliseconds}");
             Console.WriteLine(bufferTo);
-            
+
         }
 
         public static void TestCopy()
