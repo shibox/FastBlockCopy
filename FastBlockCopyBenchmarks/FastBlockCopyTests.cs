@@ -15,13 +15,15 @@ namespace FastBlockCopyBenchmarks
 
         public static void Run()
         {
-            byte[] from = new byte[1024];
-            byte[] to = new byte[1024];
+            byte[] from = new byte[102400];
+            byte[] to = new byte[102400];
             Stopwatch w = Stopwatch.StartNew();
             for (int i = 0; i < 10000000; i++)
             {
-                from.UnsafeBlockCopy(0, to, 0, 32);
-                //Buffer.BlockCopy(from, 0, to, 0, 32);
+                //from.UnsafeBlockCopy(0, to, 0, 4096);
+                Buffer.BlockCopy(from, 0, to, 0, 1024);
+                //FastBuffer.UnsafeBlockCopy(from, 0, to, 0, 4096);
+
             }
             w.Stop();
             Console.WriteLine($"cost:{w.ElapsedMilliseconds}");
