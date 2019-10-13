@@ -10,908 +10,908 @@ namespace FastBlockCopy
     {
 
 			
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Byte[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (Byte* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (byte* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this SByte[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (SByte* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (sbyte* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt16[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (UInt16* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (ushort* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int16[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (Int16* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (short* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt32[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (UInt32* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (uint* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int32[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (Int32* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (int* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this UInt64[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (UInt64* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (ulong* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Int64[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (Int64* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (long* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Single[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (Single* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (float* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (Byte* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (byte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (SByte* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (sbyte* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (UInt16* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (ushort* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (Int16* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (short* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (UInt32* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (uint* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (Int32* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (int* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (UInt64* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (ulong* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (Int64* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (long* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (Single* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (float* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 				
-			public unsafe static void UnsafeBlockCopy(this Double[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
-				fixed (Double* srcOrigin = &src[srcOffset])
-				fixed (Double* dstOrigin = &dst[dstOffset])
+				fixed (double* srcOrigin = &src[srcOffset])
+				fixed (double* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
 		
 		
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -923,7 +923,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -935,7 +935,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -947,7 +947,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -959,7 +959,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -971,7 +971,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -983,7 +983,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -995,7 +995,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1007,7 +1007,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1019,7 +1019,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Byte[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this byte[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1031,7 +1031,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1043,7 +1043,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1055,7 +1055,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1067,7 +1067,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1079,7 +1079,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1091,7 +1091,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1103,7 +1103,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1115,7 +1115,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1127,7 +1127,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1139,7 +1139,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this SByte[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this sbyte[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1151,7 +1151,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1163,7 +1163,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1175,7 +1175,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1187,7 +1187,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1199,7 +1199,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1211,7 +1211,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1223,7 +1223,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1235,7 +1235,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1247,7 +1247,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1259,7 +1259,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt16[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ushort[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1271,7 +1271,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1283,7 +1283,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1295,7 +1295,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1307,7 +1307,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1319,7 +1319,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1331,7 +1331,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1343,7 +1343,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1355,7 +1355,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1367,7 +1367,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1379,7 +1379,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int16[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this short[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1391,7 +1391,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1403,7 +1403,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1415,7 +1415,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1427,7 +1427,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1439,7 +1439,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1451,7 +1451,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1463,7 +1463,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1475,7 +1475,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1487,7 +1487,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1499,7 +1499,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt32[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this uint[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1511,7 +1511,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1523,7 +1523,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1535,7 +1535,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1547,7 +1547,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1559,7 +1559,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1571,7 +1571,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1583,7 +1583,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1595,7 +1595,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1607,7 +1607,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1619,7 +1619,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int32[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this int[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1631,7 +1631,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1643,7 +1643,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1655,7 +1655,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1667,7 +1667,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1679,7 +1679,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1691,7 +1691,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1703,7 +1703,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1715,7 +1715,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1727,7 +1727,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1739,7 +1739,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this UInt64[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this ulong[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1751,7 +1751,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1763,7 +1763,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1775,7 +1775,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1787,7 +1787,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1799,7 +1799,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1811,7 +1811,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1823,7 +1823,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1835,7 +1835,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1847,7 +1847,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1859,7 +1859,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Int64[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this long[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1871,7 +1871,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1883,7 +1883,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1895,7 +1895,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1907,7 +1907,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1919,7 +1919,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1931,7 +1931,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1943,7 +1943,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1955,7 +1955,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1967,7 +1967,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1979,7 +1979,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Single[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this float[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -1991,7 +1991,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, Byte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2003,7 +2003,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, SByte[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2015,7 +2015,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, UInt16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2027,7 +2027,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, Int16[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2039,7 +2039,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, UInt32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2051,7 +2051,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, Int32[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2063,7 +2063,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, UInt64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2075,7 +2075,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, Int64[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2087,7 +2087,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, Single[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));
@@ -2099,7 +2099,7 @@ namespace FastBlockCopy
 				UnsafeBlockCopy(src,srcOffset,dst,dstOffset,count);
 			}
 				
-			public unsafe static void BlockCopy(this Double[] src, int srcOffset, Double[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this double[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));

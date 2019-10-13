@@ -18,16 +18,16 @@ namespace FastBlockCopy
     {
 
 	<#
-    foreach (var src in supportedTypes)
+    foreach (var src in supportedTypeNames)
     {
-		foreach (var dst in supportedTypes)
+		foreach (var dst in supportedTypeNames)
 		{
 #>
 		
-			public unsafe static void UnsafeBlockCopy(this <#= src.Name #>[] src, int srcOffset, <#= dst.Name #>[] dst, int dstOffset, int count)
+			public unsafe static void UnsafeBlockCopy(this <#= src #>[] src, int srcOffset, <#= dst #>[] dst, int dstOffset, int count)
 			{
-				fixed (<#= src.Name #>* srcOrigin = &src[srcOffset])
-				fixed (<#= dst.Name #>* dstOrigin = &dst[dstOffset])
+				fixed (<#= src #>* srcOrigin = &src[srcOffset])
+				fixed (<#= dst #>* dstOrigin = &dst[dstOffset])
 				{
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
@@ -38,13 +38,13 @@ namespace FastBlockCopy
 #>
 
 <#
-    foreach (var src in supportedTypes)
+    foreach (var src in supportedTypeNames)
     {
-		foreach (var dst in supportedTypes)
+		foreach (var dst in supportedTypeNames)
 		{
 #>
 		
-			public unsafe static void BlockCopy(this <#= src.Name #>[] src, int srcOffset, <#= dst.Name #>[] dst, int dstOffset, int count)
+			public unsafe static void BlockCopy(this <#= src #>[] src, int srcOffset, <#= dst #>[] dst, int dstOffset, int count)
 			{
 				if (src == null) throw new ArgumentNullException(nameof(src));
 		        if (dst == null) throw new ArgumentNullException(nameof(dst));

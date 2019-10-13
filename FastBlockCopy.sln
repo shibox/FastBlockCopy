@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26621.2
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBlockCopy", "FastBlockCopy\FastBlockCopy.csproj", "{DA476F32-E531-40BC-A245-88BB06983441}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBlockCopy", "FastBlockCopy\FastBlockCopy.csproj", "{DA476F32-E531-40BC-A245-88BB06983441}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBlockCopy-NetCore", "FastBlockCopy-NetCore\FastBlockCopy-NetCore.csproj", "{FD843B3A-5BA7-49C9-BB7E-3773E5FBAA34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBlockCopyBenchmarks", "FastBlockCopyBenchmarks\FastBlockCopyBenchmarks.csproj", "{DBA5EF3F-B859-4DED-B1CD-556F8F4F5397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBlockCopyBenchmarks", "FastBlockCopyBenchmarks\FastBlockCopyBenchmarks.csproj", "{DBA5EF3F-B859-4DED-B1CD-556F8F4F5397}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBlockCopyTests", "FastBlockCopyTests\FastBlockCopyTests.csproj", "{9DF2C48D-45F5-4446-B2C4-F4D0217EC581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBlockCopyTests", "FastBlockCopyTests\FastBlockCopyTests.csproj", "{9DF2C48D-45F5-4446-B2C4-F4D0217EC581}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{DA476F32-E531-40BC-A245-88BB06983441}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA476F32-E531-40BC-A245-88BB06983441}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA476F32-E531-40BC-A245-88BB06983441}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD843B3A-5BA7-49C9-BB7E-3773E5FBAA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD843B3A-5BA7-49C9-BB7E-3773E5FBAA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD843B3A-5BA7-49C9-BB7E-3773E5FBAA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD843B3A-5BA7-49C9-BB7E-3773E5FBAA34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBA5EF3F-B859-4DED-B1CD-556F8F4F5397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBA5EF3F-B859-4DED-B1CD-556F8F4F5397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBA5EF3F-B859-4DED-B1CD-556F8F4F5397}.Release|Any CPU.ActiveCfg = Release|Any CPU
