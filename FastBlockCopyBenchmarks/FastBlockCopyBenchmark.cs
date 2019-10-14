@@ -31,6 +31,9 @@ namespace FastBlockCopyBenchmarks
             1024,
             4096,
             8512)]
+        public int Size;
+
+        [Params(10000)]
         public int N;
 
         [GlobalSetup]
@@ -42,31 +45,34 @@ namespace FastBlockCopyBenchmarks
         [Benchmark(Baseline = true)]
         public void UnsafeFastBufferCopy()
         {
-            FastBuffer.UnsafeBlockCopy(bufferFrom, 0, bufferTo, 0, N);
+            for (int i = 0; i < N; i++)
+                FastBuffer.UnsafeBlockCopy(bufferFrom, 0, bufferTo, 0, Size);
         }
 
         [Benchmark]
         public void FastBufferCopy()
         {
-            FastBuffer.BlockCopy(bufferFrom, 0, bufferTo, 0, N);
+            for (int i = 0; i < N; i++)
+                FastBuffer.BlockCopy(bufferFrom, 0, bufferTo, 0, Size);
         }
 
         //[Benchmark]
         //public void ArrayCopy()
         //{
-        //    Array.Copy(bufferFrom, 0, bufferTo, 0, N);
+        //    Array.Copy(bufferFrom, 0, bufferTo, 0, Size);
         //}
 
         [Benchmark]
         public void BlockCopy()
         {
-            Buffer.BlockCopy(bufferFrom, 0, bufferTo, 0, N);
+            for (int i = 0; i < N; i++)
+                Buffer.BlockCopy(bufferFrom, 0, bufferTo, 0, Size);
         }
 
         //[Benchmark]
         //public void VectorCopy()
         //{
-        //    FastBuffer.VectorCopy(bufferFrom, 0, bufferTo, 0, N);
+        //    FastBuffer.VectorCopy(bufferFrom, 0, bufferTo, 0, Size);
         //}
 
 
