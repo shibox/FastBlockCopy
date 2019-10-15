@@ -9,7 +9,7 @@ namespace Tools
     {
         public static void Create()
         {
-            File.WriteAllText("CreateSwitchCode.cs", CreateSwitchCode());
+            File.WriteAllText("CreateSwitchCode.cs", CreateSwitchCodeMethod());
         }
 
         public static string CreateSwitchCode()
@@ -32,6 +32,25 @@ namespace Tools
             sb.AppendLine("default:");
             sb.AppendLine("break;");
             sb.AppendLine("}");
+            return sb.ToString();
+        }
+
+        public static string CreateSwitchCodeMethod()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < 256; i++)
+            {
+                sb.AppendLine($"func[{i}] = FP_{i.ToString().PadLeft( 3, '0')};");
+            }
+
+            for (int i = 0; i < 256; i++)
+            {
+                sb.AppendLine($"public unsafe static void FP_{i.ToString().PadLeft(3,'0')}(int* rs)");
+                sb.AppendLine("{");
+                sb.AppendLine(string.Format("rs[{0}]++;", i));
+                sb.AppendLine("}");
+            }
             return sb.ToString();
         }
 

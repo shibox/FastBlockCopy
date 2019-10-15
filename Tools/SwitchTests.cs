@@ -4227,6 +4227,35 @@ namespace Tools
                 rs[i] += rss[i];
         }
 
+        private unsafe static void GTop1(ArraySegment<byte>[] arrays, int[] masks, int[] rs, int count,byte[] bits)
+        {
+            int* rss = stackalloc int[rs.Length];
+            fixed (byte* pd = &arrays[0].Array[arrays[0].Offset])
+            {
+                byte* ap0 = pd;
+                const int bsize = 8;
+                int length = arrays[0].Count;
+                int blockCount = length / bsize;
+                int i = 0;
+                for (; i < blockCount * bsize; i += bsize)
+                {
+                    rss[*(ap0 + 0)]++;
+                    rss[*(ap0 + 1)]++;
+                    rss[*(ap0 + 2)]++;
+                    rss[*(ap0 + 3)]++;
+                    rss[*(ap0 + 4)]++;
+                    rss[*(ap0 + 5)]++;
+                    rss[*(ap0 + 6)]++;
+                    rss[*(ap0 + 7)]++;
+                    ap0 += 8;
+                }
+                for (; i < length; i++)
+                    rss[*ap0++]++;
+            }
+            for (int i = 0; i < rs.Length; i++)
+                rs[i] += rss[i];
+        }
+
         public unsafe static int[] Funs(byte[] arr)
         {
             //Action<int[], int>[] func = new Action<int[], int>[256];
@@ -4266,14 +4295,23 @@ namespace Tools
                     //func[*(ap0 + 5)](rs, *(ap0 + 5));
                     //func[*(ap0 + 6)](rs, *(ap0 + 6));
                     //func[*(ap0 + 7)](rs, *(ap0 + 7));
-                    func[*(ap0 + 0)](rss, *(ap0 + 0));
-                    func[*(ap0 + 1)](rss, *(ap0 + 1));
-                    func[*(ap0 + 2)](rss, *(ap0 + 2));
-                    func[*(ap0 + 3)](rss, *(ap0 + 3));
-                    func[*(ap0 + 4)](rss, *(ap0 + 4));
-                    func[*(ap0 + 5)](rss, *(ap0 + 5));
-                    func[*(ap0 + 6)](rss, *(ap0 + 6));
-                    func[*(ap0 + 7)](rss, *(ap0 + 7));
+                    //func[*(ap0 + 0)](rss, *(ap0 + 0));
+                    //func[*(ap0 + 1)](rss, *(ap0 + 1));
+                    //func[*(ap0 + 2)](rss, *(ap0 + 2));
+                    //func[*(ap0 + 3)](rss, *(ap0 + 3));
+                    //func[*(ap0 + 4)](rss, *(ap0 + 4));
+                    //func[*(ap0 + 5)](rss, *(ap0 + 5));
+                    //func[*(ap0 + 6)](rss, *(ap0 + 6));
+                    //func[*(ap0 + 7)](rss, *(ap0 + 7));
+
+                    func[*(ap0 + 0)](rss);
+                    func[*(ap0 + 1)](rss);
+                    func[*(ap0 + 2)](rss);
+                    func[*(ap0 + 3)](rss);
+                    func[*(ap0 + 4)](rss);
+                    func[*(ap0 + 5)](rss);
+                    func[*(ap0 + 6)](rss);
+                    func[*(ap0 + 7)](rss);
                     ap0 += 8;
                 }
                 //for (; i < length; i++)
@@ -4302,12 +4340,12 @@ namespace Tools
 
         delegate void FFF(int[] rs, int b);
 
-        unsafe delegate void FFFP(int* rs, int b);
+        unsafe delegate void FFFP(int* rs);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe static void FP(int* rs, int b)
+        public unsafe static void FP(int* rs)
         {
-            rs[b]++;
+            rs[0]++;
         }
 
     }
