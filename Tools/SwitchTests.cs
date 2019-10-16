@@ -20,7 +20,7 @@ namespace Tools
             //{
             //    SwitchBench(pd,bytes.Length);
             //}
-            Funs(bytes);
+            FunsMap.Funs(bytes);
             Console.WriteLine($"SwitchBench Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
@@ -42,7 +42,7 @@ namespace Tools
             //{
             //    SwitchBench(pd, bytes.Length);
             //}
-            int[] rs = Funs(bytes);
+            int[] rs = FunsMap.Funs(bytes);
             //Console.WriteLine(rs);
             Console.WriteLine($"SwitchBench Cost:{w.ElapsedMilliseconds}");
 
