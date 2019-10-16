@@ -39,10 +39,35 @@ namespace Tools
         {
             StringBuilder sb = new StringBuilder();
 
+            
+            for (int i = 0; i < 256; i++)
+            {
+                sb.AppendLine(string.Format($"case Enum256.V_{i.ToString().PadLeft(3, '0')}:", i));
+                sb.AppendLine("{");
+                sb.AppendLine(string.Format("n++;", i));
+                sb.AppendLine("break;");
+                sb.AppendLine("}");
+            }
+            sb.AppendLine();
+
+            for (int i = 0; i < 256; i++)
+            {
+                sb.AppendLine($"V_{i.ToString().PadLeft(3, '0')} = {i},");
+            }
+            sb.AppendLine();
+
+            for (int i = 0; i < 256; i++)
+            {
+                sb.AppendLine($"case {i}:");
+                sb.AppendLine($"    count++");
+            }
+            sb.AppendLine();
+
             for (int i = 0; i < 256; i++)
             {
                 sb.AppendLine($"func[{i}] = FP_{i.ToString().PadLeft( 3, '0')};");
             }
+            sb.AppendLine();
 
             for (int i = 0; i < 256; i++)
             {
@@ -51,6 +76,8 @@ namespace Tools
                 sb.AppendLine(string.Format("rs[{0}]++;", i));
                 sb.AppendLine("}");
             }
+            sb.AppendLine();
+
             return sb.ToString();
         }
 

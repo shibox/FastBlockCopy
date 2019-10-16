@@ -13,24 +13,51 @@ namespace Tools
             Random rd = new Random(Guid.NewGuid().GetHashCode());
             byte[] bytes = new byte[100000000];
             //for (int i = 0; i < bytes.Length; i++)
-            //    bytes[i] = 200;
+            //    bytes[i] = (byte)i;
             rd.NextBytes(bytes);
             Stopwatch w = Stopwatch.StartNew();
             //fixed (byte* pd = &bytes[0])
             //{
             //    SwitchBench(pd,bytes.Length);
             //}
-            FunsMap.Funs(bytes);
+            FunsMap16.Funs(bytes);
             Console.WriteLine($"SwitchBench Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
             fixed (byte* pd = &bytes[0])
             {
                 //SwitchBench2(pd, bytes.Length);
-                SwitchBench3(bytes, bytes.Length);
+                SwitchBench256(bytes, bytes.Length);
             }
             //Funs(bytes);
-            Console.WriteLine($"SwitchBench2 Cost:{w.ElapsedMilliseconds}");
+            Console.WriteLine($"SwitchBench256 Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            fixed (byte* pd = &bytes[0])
+            {
+                //SwitchBench2(pd, bytes.Length);
+                SwitchBench16(bytes, bytes.Length);
+            }
+            //Funs(bytes);
+            Console.WriteLine($"SwitchBench16 Cost:{w.ElapsedMilliseconds}");
+
+            //w = Stopwatch.StartNew();
+            //fixed (byte* pd = &bytes[0])
+            //{
+            //    //SwitchBench2(pd, bytes.Length);
+            //    IfBench(bytes, bytes.Length);
+            //}
+            ////Funs(bytes);
+            //Console.WriteLine($"IfBench Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            fixed (byte* pd = &bytes[0])
+            {
+                //SwitchBench2(pd, bytes.Length);
+                SwitchBenchEnum(bytes, bytes.Length);
+            }
+            //Funs(bytes);
+            Console.WriteLine($"SwitchBenchEnum Cost:{w.ElapsedMilliseconds}");
 
             ArraySegment<byte>[] arrays = new ArraySegment<byte>[] { new ArraySegment<byte>(bytes) };
             w = Stopwatch.StartNew();
@@ -42,7 +69,7 @@ namespace Tools
             //{
             //    SwitchBench(pd, bytes.Length);
             //}
-            int[] rs = FunsMap.Funs(bytes);
+            int[] rs = FunsMap16.Funs(bytes);
             //Console.WriteLine(rs);
             Console.WriteLine($"SwitchBench Cost:{w.ElapsedMilliseconds}");
 
@@ -50,10 +77,37 @@ namespace Tools
             fixed (byte* pd = &bytes[0])
             {
                 //SwitchBench2(pd, bytes.Length);
-                SwitchBench3(bytes, bytes.Length);
+                SwitchBench256(bytes, bytes.Length);
             }
             //Funs(bytes);
-            Console.WriteLine($"SwitchBench2 Cost:{w.ElapsedMilliseconds}");
+            Console.WriteLine($"SwitchBench256 Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            fixed (byte* pd = &bytes[0])
+            {
+                //SwitchBench2(pd, bytes.Length);
+                SwitchBench16(bytes, bytes.Length);
+            }
+            //Funs(bytes);
+            Console.WriteLine($"SwitchBench16 Cost:{w.ElapsedMilliseconds}");
+
+            //w = Stopwatch.StartNew();
+            //fixed (byte* pd = &bytes[0])
+            //{
+            //    //SwitchBench2(pd, bytes.Length);
+            //    IfBench(bytes, bytes.Length);
+            //}
+            ////Funs(bytes);
+            //Console.WriteLine($"IfBench Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            fixed (byte* pd = &bytes[0])
+            {
+                //SwitchBench2(pd, bytes.Length);
+                SwitchBenchEnum(bytes, bytes.Length);
+            }
+            //Funs(bytes);
+            Console.WriteLine($"SwitchBenchEnum Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
             GTop1(arrays, null, new int[256], bytes.Length);
@@ -1610,7 +1664,7 @@ namespace Tools
 
         }
 
-        public unsafe static void SwitchBench2(byte* bs, int count)
+        public unsafe static void SwitchBench256(byte* bs, int count)
         {
             int n = 0;
             for (int i = 0; i < count; i++)
@@ -2903,7 +2957,100 @@ namespace Tools
             }
         }
 
-        public unsafe static void SwitchBench3(byte[] bs, int count)
+        public unsafe static void SwitchBench16(byte[] bs, int count)
+        {
+            int n = 0;
+            int v = 0;
+            for (int i = 0; i < count; i++)
+            {
+                v = bs[i] & 0x0F;
+                switch (v)
+                {
+                    case 0:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 1:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 2:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 3:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 4:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 5:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 6:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 7:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 8:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 9:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 10:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 11:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 12:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 13:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 14:
+                        {
+                            n++;
+                            break;
+                        }
+                    case 15:
+                        {
+                            n++;
+                            break;
+                        }
+                }
+            }
+        }
+
+        public unsafe static void SwitchBench256(byte[] bs, int count)
         {
             int n = 0;
             byte v = 0;
@@ -4192,9 +4339,1322 @@ namespace Tools
                             n++;
                             break;
                         }
-                    default:
-                        break;
+                    //default:
+                    //    break;
                 }
+            }
+        }
+
+        public unsafe static void SwitchBenchEnum(byte[] bs, int count)
+        {
+            int n = 0;
+            byte v = 0;
+            for (int i = 0; i < count; i++)
+            {
+                Enum256 e = (Enum256)bs[i];
+                switch (e)
+                {
+                    case Enum256.V_000:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_001:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_002:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_003:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_004:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_005:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_006:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_007:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_008:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_009:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_010:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_011:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_012:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_013:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_014:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_015:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_016:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_017:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_018:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_019:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_020:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_021:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_022:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_023:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_024:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_025:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_026:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_027:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_028:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_029:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_030:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_031:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_032:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_033:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_034:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_035:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_036:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_037:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_038:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_039:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_040:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_041:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_042:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_043:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_044:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_045:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_046:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_047:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_048:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_049:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_050:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_051:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_052:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_053:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_054:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_055:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_056:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_057:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_058:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_059:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_060:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_061:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_062:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_063:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_064:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_065:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_066:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_067:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_068:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_069:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_070:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_071:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_072:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_073:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_074:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_075:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_076:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_077:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_078:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_079:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_080:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_081:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_082:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_083:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_084:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_085:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_086:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_087:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_088:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_089:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_090:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_091:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_092:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_093:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_094:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_095:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_096:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_097:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_098:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_099:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_100:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_101:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_102:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_103:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_104:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_105:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_106:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_107:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_108:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_109:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_110:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_111:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_112:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_113:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_114:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_115:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_116:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_117:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_118:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_119:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_120:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_121:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_122:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_123:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_124:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_125:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_126:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_127:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_128:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_129:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_130:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_131:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_132:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_133:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_134:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_135:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_136:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_137:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_138:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_139:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_140:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_141:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_142:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_143:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_144:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_145:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_146:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_147:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_148:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_149:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_150:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_151:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_152:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_153:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_154:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_155:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_156:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_157:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_158:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_159:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_160:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_161:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_162:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_163:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_164:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_165:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_166:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_167:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_168:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_169:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_170:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_171:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_172:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_173:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_174:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_175:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_176:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_177:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_178:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_179:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_180:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_181:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_182:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_183:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_184:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_185:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_186:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_187:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_188:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_189:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_190:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_191:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_192:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_193:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_194:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_195:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_196:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_197:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_198:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_199:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_200:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_201:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_202:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_203:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_204:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_205:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_206:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_207:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_208:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_209:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_210:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_211:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_212:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_213:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_214:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_215:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_216:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_217:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_218:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_219:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_220:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_221:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_222:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_223:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_224:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_225:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_226:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_227:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_228:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_229:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_230:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_231:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_232:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_233:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_234:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_235:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_236:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_237:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_238:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_239:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_240:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_241:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_242:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_243:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_244:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_245:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_246:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_247:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_248:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_249:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_250:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_251:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_252:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_253:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_254:
+                        {
+                            n++;
+                            break;
+                        }
+                    case Enum256.V_255:
+                        {
+                            n++;
+                            break;
+                        }
+                    //default:
+                    //    break;
+                }
+            }
+        }
+
+        public unsafe static void IfBench(byte[] bs, int count)
+        {
+            int n = 0;
+            int v = 0;
+            for (int i = 0; i < count; i++)
+            {
+                v = bs[i] & 0x03;
+                if (v == 0)
+                    n++;
+                else if (v == 1)
+                    n++;
+                else if (v == 2)
+                    n++;
+                else if (v == 3)
+                    n++;
             }
         }
 

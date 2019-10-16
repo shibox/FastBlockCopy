@@ -4,14 +4,11 @@ using System.Text;
 
 namespace Tools
 {
-    public class FunsMap
+    public class FunsMap256
     {
         public unsafe static int[] Funs(byte[] arr)
         {
-            //Action<int[], int>[] func = new Action<int[], int>[256];
             FFFP[] func = new FFFP[256];
-            //for (int i = 0; i < func.Length; i++)
-            //    func[i] = FP;
             func[0] = FP_000;
             func[1] = FP_001;
             func[2] = FP_002;
