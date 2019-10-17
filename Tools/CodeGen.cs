@@ -39,7 +39,32 @@ namespace Tools
         {
             StringBuilder sb = new StringBuilder();
 
-            
+            //case 0:
+            //            rs[0]++;
+            //break;
+
+            for (int i = 0; i < 256; i++)
+            {
+                string s = Convert.ToString(31, 2);
+                sb.AppendLine($"case {i}:");
+                sb.AppendLine("{");
+                sb.AppendLine($"rs[{i}]++;");
+                sb.AppendLine("break;");
+                sb.AppendLine("}");
+            }
+            sb.AppendLine();
+
+            for (int i = 0; i < 256; i++)
+            {
+                string s = Convert.ToString(31, 2);
+                sb.AppendLine(string.Format("case {0}:", i));
+                sb.AppendLine("{");
+                sb.AppendLine(string.Format("n++;", i));
+                sb.AppendLine("break;");
+                sb.AppendLine("}");
+            }
+            sb.AppendLine();
+
             for (int i = 0; i < 256; i++)
             {
                 sb.AppendLine(string.Format($"case Enum256.V_{i.ToString().PadLeft(3, '0')}:", i));

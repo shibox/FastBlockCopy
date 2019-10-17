@@ -6,6 +6,8 @@ namespace Tools
     {
         static void Main(string[] args)
         {
+
+            //Console.WriteLine(Convert.ToString(31, 2));
             //CodeGen.Create();
             SwitchTests.Run();
             Console.ReadLine();
