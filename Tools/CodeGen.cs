@@ -47,19 +47,19 @@ namespace Tools
             {
                 if (i == 1)
                     sb.Append("1,");
-                if (i == 2)
+                else if (i == 2)
                     sb.Append("2,");
-                if (i == 4)
+                else if (i == 4)
                     sb.Append("3,");
-                if (i == 8)
+                else if (i == 8)
                     sb.Append("4,");
-                if (i == 16)
+                else if (i == 16)
                     sb.Append("5,");
-                if (i == 32)
+                else if (i == 32)
                     sb.Append("6,");
-                if (i == 64)
+                else if (i == 64)
                     sb.Append("7,");
-                if (i == 128)
+                else if (i == 128)
                     sb.Append("8,");
                 else
                     sb.Append("0,");
