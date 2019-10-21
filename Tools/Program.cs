@@ -8,7 +8,7 @@ namespace Tools
         {
 
             //Console.WriteLine(Convert.ToString(31, 2));
-            //CodeGen.Create();
+            CodeGen.Create();
             SwitchTests.Run();
             Console.ReadLine();
             Console.WriteLine("Hello World!");

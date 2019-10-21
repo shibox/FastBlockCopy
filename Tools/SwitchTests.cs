@@ -12,6 +12,7 @@ namespace Tools
         {
             Random rd = new Random(Guid.NewGuid().GetHashCode());
             byte[] bytes = new byte[100000000];
+            byte[] datas = new byte[bytes.Length * 8];
             for (int i = 0; i < bytes.Length; i++)
             {
                 //bytes[i] = (byte)i;
@@ -19,6 +20,8 @@ namespace Tools
             }
 
             //rd.NextBytes(bytes);
+            rd.NextBytes(datas);
+
             Stopwatch w = Stopwatch.StartNew();
             //fixed (byte* pd = &bytes[0])
             //{
@@ -93,6 +96,16 @@ namespace Tools
             }
             //Funs(bytes);
             Console.WriteLine($"SwitchBench256DiffRSSort Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            fixed (byte* pd = &bytes[0])
+            {
+                //SwitchBench2(pd, bytes.Length);
+                int[] rs1 =SwitchBit.SwitchBench256DiffRSSort(datas, bytes, bytes.Length);
+                //Console.WriteLine(rs1);
+            }
+            //Funs(bytes);
+            Console.WriteLine($"SwitchBench256DiffRSSortData Cost:{w.ElapsedMilliseconds}");
 
             //w = Stopwatch.StartNew();
             //fixed (byte* pd = &bytes[0])
@@ -194,6 +207,16 @@ namespace Tools
             }
             //Funs(bytes);
             Console.WriteLine($"SwitchBench256DiffRSSort Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            fixed (byte* pd = &bytes[0])
+            {
+                //SwitchBench2(pd, bytes.Length);
+                int[] rs1 = SwitchBit.SwitchBench256DiffRSSort(datas, bytes, bytes.Length);
+                //Console.WriteLine(rs1);
+            }
+            //Funs(bytes);
+            Console.WriteLine($"SwitchBench256DiffRSSortData Cost:{w.ElapsedMilliseconds}");
 
             //w = Stopwatch.StartNew();
             //fixed (byte* pd = &bytes[0])
