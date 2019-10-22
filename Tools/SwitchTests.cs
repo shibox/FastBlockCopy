@@ -17,6 +17,7 @@ namespace Tools
             {
                 //bytes[i] = (byte)i;
                 bytes[i] = (byte)Math.Pow(2, rd.Next(0, 8));
+                //bytes[i] = 255;
             }
 
             //rd.NextBytes(bytes);
@@ -30,23 +31,23 @@ namespace Tools
             FunsMap16.Funs(bytes);
             Console.WriteLine($"SwitchBench Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            fixed (byte* pd = &bytes[0])
-            {
-                //SwitchBench2(pd, bytes.Length);
-                SwitchBench256(bytes, bytes.Length);
-            }
-            //Funs(bytes);
-            Console.WriteLine($"SwitchBench256 Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //fixed (byte* pd = &bytes[0])
+            //{
+            //    //SwitchBench2(pd, bytes.Length);
+            //    SwitchBench256(bytes, bytes.Length);
+            //}
+            ////Funs(bytes);
+            //Console.WriteLine($"SwitchBench256 Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            fixed (byte* pd = &bytes[0])
-            {
-                //SwitchBench2(pd, bytes.Length);
-                SwitchBench16(bytes, bytes.Length);
-            }
-            //Funs(bytes);
-            Console.WriteLine($"SwitchBench16 Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //fixed (byte* pd = &bytes[0])
+            //{
+            //    //SwitchBench2(pd, bytes.Length);
+            //    SwitchBench16(bytes, bytes.Length);
+            //}
+            ////Funs(bytes);
+            //Console.WriteLine($"SwitchBench16 Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
             fixed (byte* pd = &bytes[0])
@@ -57,20 +58,20 @@ namespace Tools
             //Funs(bytes);
             Console.WriteLine($"SwitchBench16Goto Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            int[] rs1 = SwitchBench16GotoDiff(bytes, bytes.Length);
-            Console.WriteLine($"SwitchBench16GotoDiff Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //int[] rs1 = SwitchBench16GotoDiff(bytes, bytes.Length);
+            //Console.WriteLine($"SwitchBench16GotoDiff Cost:{w.ElapsedMilliseconds}");
+
+            //w = Stopwatch.StartNew();
+            //rs1 = SwitchBench16DiffRS(bytes, bytes.Length);
+            //Console.WriteLine($"SwitchBench16DiffRS Cost:{w.ElapsedMilliseconds}");
+
+            //w = Stopwatch.StartNew();
+            //rs1 = SwitchBench256DiffRS(bytes, bytes.Length);
+            //Console.WriteLine($"SwitchBench256DiffRS Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
-            rs1 = SwitchBench16DiffRS(bytes, bytes.Length);
-            Console.WriteLine($"SwitchBench16DiffRS Cost:{w.ElapsedMilliseconds}");
-
-            w = Stopwatch.StartNew();
-            rs1 = SwitchBench256DiffRS(bytes, bytes.Length);
-            Console.WriteLine($"SwitchBench256DiffRS Cost:{w.ElapsedMilliseconds}");
-
-            w = Stopwatch.StartNew();
-            rs1 = SwitchBench256DiffRSSort(bytes, bytes.Length);
+            int[] rs1 = SwitchBench256DiffRSSort(bytes, bytes.Length);
             Console.WriteLine($"SwitchBench256DiffRSSort Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
@@ -80,6 +81,10 @@ namespace Tools
             w = Stopwatch.StartNew();
             rs1 = SwitchBit.GroupSwitch256Rs(datas, bytes, bytes.Length);
             Console.WriteLine($"GroupSwitch256Rs Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            rs1 = SwitchBit.GroupLookup256UnsafeRs(datas, bytes, bytes.Length);
+            Console.WriteLine($"GroupSwitch256UnsafeRsM Cost:{w.ElapsedMilliseconds}");
 
             //w = Stopwatch.StartNew();
             //fixed (byte* pd = &bytes[0])
@@ -115,23 +120,23 @@ namespace Tools
             //Console.WriteLine(rs);
             Console.WriteLine($"SwitchBench Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            fixed (byte* pd = &bytes[0])
-            {
-                //SwitchBench2(pd, bytes.Length);
-                SwitchBench256(bytes, bytes.Length);
-            }
-            //Funs(bytes);
-            Console.WriteLine($"SwitchBench256 Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //fixed (byte* pd = &bytes[0])
+            //{
+            //    //SwitchBench2(pd, bytes.Length);
+            //    SwitchBench256(bytes, bytes.Length);
+            //}
+            ////Funs(bytes);
+            //Console.WriteLine($"SwitchBench256 Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            fixed (byte* pd = &bytes[0])
-            {
-                //SwitchBench2(pd, bytes.Length);
-                SwitchBench16(bytes, bytes.Length);
-            }
-            //Funs(bytes);
-            Console.WriteLine($"SwitchBench16 Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //fixed (byte* pd = &bytes[0])
+            //{
+            //    //SwitchBench2(pd, bytes.Length);
+            //    SwitchBench16(bytes, bytes.Length);
+            //}
+            ////Funs(bytes);
+            //Console.WriteLine($"SwitchBench16 Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
             fixed (byte* pd = &bytes[0])
@@ -142,17 +147,17 @@ namespace Tools
             //Funs(bytes);
             Console.WriteLine($"SwitchBench16Goto Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            rs1 = SwitchBench16GotoDiff(bytes, bytes.Length);
-            Console.WriteLine($"SwitchBench16GotoDiff Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //rs1 = SwitchBench16GotoDiff(bytes, bytes.Length);
+            //Console.WriteLine($"SwitchBench16GotoDiff Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            rs1 = SwitchBench16DiffRS(bytes, bytes.Length);
-            Console.WriteLine($"SwitchBench16DiffRS Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //rs1 = SwitchBench16DiffRS(bytes, bytes.Length);
+            //Console.WriteLine($"SwitchBench16DiffRS Cost:{w.ElapsedMilliseconds}");
 
-            w = Stopwatch.StartNew();
-            rs1 = SwitchBench256DiffRS(bytes, bytes.Length);
-            Console.WriteLine($"SwitchBench256DiffRS Cost:{w.ElapsedMilliseconds}");
+            //w = Stopwatch.StartNew();
+            //rs1 = SwitchBench256DiffRS(bytes, bytes.Length);
+            //Console.WriteLine($"SwitchBench256DiffRS Cost:{w.ElapsedMilliseconds}");
 
             w = Stopwatch.StartNew();
             rs1 = SwitchBench256DiffRSSort(bytes, bytes.Length);
@@ -165,6 +170,10 @@ namespace Tools
             w = Stopwatch.StartNew();
             rs1 = SwitchBit.GroupSwitch256Rs(datas, bytes, bytes.Length);
             Console.WriteLine($"GroupSwitch256Rs Cost:{w.ElapsedMilliseconds}");
+
+            w = Stopwatch.StartNew();
+            rs1 = SwitchBit.GroupLookup256UnsafeRs(datas, bytes, bytes.Length);
+            Console.WriteLine($"GroupSwitch256UnsafeRsM Cost:{w.ElapsedMilliseconds}");
 
             //w = Stopwatch.StartNew();
             //fixed (byte* pd = &bytes[0])

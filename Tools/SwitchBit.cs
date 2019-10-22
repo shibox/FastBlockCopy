@@ -7,91 +7,28 @@ namespace Tools
 {
     public class SwitchBit
     {
-        static readonly byte[] Lookup1 = new byte[] { 0, 1, 2, 0, 3, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        readonly byte[] Lookup2 = new byte[] { };
-        readonly byte[] Lookup3 = new byte[] { };
-        readonly byte[] Lookup4 = new byte[] { };
-        readonly byte[] Lookup5 = new byte[] { };
-        readonly byte[] Lookup6 = new byte[] { };
-        readonly byte[] Lookup7 = new byte[] { };
-        readonly byte[] Lookup8 = new byte[] { };
+        #region 字段
 
+        static readonly byte[] lookup1 = new byte[] { 0, 1, 2, 0, 3, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        static readonly Lookup2[] lookup2 = new Lookup2[] { };
+        static readonly Lookup3[] lookup3 = new Lookup3[] { };
+        static readonly Lookup4[] lookup4 = new Lookup4[] { };
+        static readonly Lookup5[] lookup5 = new Lookup5[] { };
+        static readonly Lookup6[] lookup6 = new Lookup6[] { };
+        static readonly Lookup7[] lookup7 = new Lookup7[] { };
 
-        public unsafe static void SwitchBench16(byte[] data, int[] rs, byte[] bits, int count)
-        {
-            int n = 0;
-            int v = 0;
-            for (int i = 0; i < count; i++)
-            {
-                n += 8;
-                v = bits[i];
-            Count1:
-                {
-                    rs[data[n + 0]]++;
-                }
-            Count2:
-                {
+        #endregion
 
-                }
-            Count3:
-                {
-
-                }
-            Count4:
-                {
-
-                }
-            Count5:
-                {
-
-                }
-            Count6:
-                {
-
-                }
-            Count7:
-                {
-
-                }
-            Count8:
-                {
-                    rs[data[n + 0]]++;
-                    rs[data[n + 1]]++;
-                    rs[data[n + 2]]++;
-                    rs[data[n + 3]]++;
-                    rs[data[n + 4]]++;
-                    rs[data[n + 5]]++;
-                    rs[data[n + 6]]++;
-                    rs[data[n + 7]]++;
-                }
-            }
-        
-
-        }
-
-        private unsafe static void Count1(int[] rs,byte[] data,int start, int n)
-        {
-            rs[data[start + n]]++;
-        }
-
-        private unsafe static void Count2(int[] rs, byte[] data, int start, int n0,int n1)
-        {
-            rs[data[start + n0]]++;
-            rs[data[start + n1]]++;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private unsafe static void Count1(int* rs, byte* data, int offset)
-        {
-            rs[*(data + offset)]++;
-        }
-
-        
         public unsafe static int[] GroupSwitch256UnsafeRs(byte[] data, byte[] bit, int count)
         {
             int* rs = stackalloc int[256];
-            fixed (byte* pb = &bit[0],pd=&data[0],look = &Lookup1[0])
+            fixed (byte* pb = &bit[0],pd=&data[0],look = &lookup1[0])
             {
+                //fixed (Lookup2* lp = &Lookup2[0])
+                //{ 
+                
+                //}
+
                 byte* bb = pb;
                 byte* dd = pd;
                 byte v = 0;
@@ -106,77 +43,87 @@ namespace Tools
                     switch (v)
                     {
                         case 1:
-                            {
-                                //rs[1]++;
-                                //break;
-                                //offset = 1;
-                                goto Size1;
-                                //Count1(rs, dd, 1);
-                                break;
-                            }
                         case 2:
-                            {
-                                //rs[2]++;
-                                //break;
-                                //offset = 2;
-                                goto Size1;
-                                //Count1(rs, dd, 2);
-                                break;
-                            }
                         case 4:
-                            {
-                                //rs[4]++;
-                                //break;
-                                //offset = 4;
-                                goto Size1;
-                                //Count1(rs, dd, 3);
-                                break;
-                            }
                         case 8:
-                            {
-                                //rs[8]++;
-                                //break;
-                                //offset = 8;
-                                goto Size1;
-                                //Count1(rs, dd, 4);
-                                break;
-                            }
                         case 16:
-                            {
-                                //rs[16]++;
-                                //break;
-                                //offset = 16;
-                                goto Size1;
-                                //Count1(rs, dd, 5);
-                                break;
-                            }
                         case 32:
-                            {
-                                //rs[32]++;
-                                //break;
-                                //offset = 32;
-                                goto Size1;
-                                //Count1(rs, dd, 6);
-                                break;
-                            }
                         case 64:
-                            {
-                                //rs[64]++;
-                                //break;
-                                //offset = 64;
-                                goto Size1;
-                                //Count1(rs, dd, 7);
-                                break;
-                            }
                         case 128:
-                            {
-                                //rs[128]++;
-                                //break;
-                                //offset = 128;
-                                goto Size1;
-                                //Count1(rs, dd, 8);
-                                break;
-                            }
+                            goto Size1;
+
+                        //case 1:
+                        //    {
+                        //        //rs[1]++;
+                        //        //break;
+                        //        //offset = 1;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 1);
+                        //        break;
+                        //    }
+                        //case 2:
+                        //    {
+                        //        //rs[2]++;
+                        //        //break;
+                        //        //offset = 2;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 2);
+                        //        break;
+                        //    }
+                        //case 4:
+                        //    {
+                        //        //rs[4]++;
+                        //        //break;
+                        //        //offset = 4;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 3);
+                        //        break;
+                        //    }
+                        //case 8:
+                        //    {
+                        //        //rs[8]++;
+                        //        //break;
+                        //        //offset = 8;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 4);
+                        //        break;
+                        //    }
+                        //case 16:
+                        //    {
+                        //        //rs[16]++;
+                        //        //break;
+                        //        //offset = 16;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 5);
+                        //        break;
+                        //    }
+                        //case 32:
+                        //    {
+                        //        //rs[32]++;
+                        //        //break;
+                        //        //offset = 32;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 6);
+                        //        break;
+                        //    }
+                        //case 64:
+                        //    {
+                        //        //rs[64]++;
+                        //        //break;
+                        //        //offset = 64;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 7);
+                        //        break;
+                        //    }
+                        //case 128:
+                        //    {
+                        //        //rs[128]++;
+                        //        //break;
+                        //        //offset = 128;
+                        //        goto Size1;
+                        //        //Count1(rs, dd, 8);
+                        //        break;
+                        //    }
 
                         case 0:
                             {
@@ -1488,6 +1435,42 @@ namespace Tools
             {
                 ret[i] = rs[i];
             }
+            return ret;
+        }
+
+        public unsafe static int[] GroupLookup256UnsafeRs(byte[] data, byte[] bit, int count)
+        {
+            int* rs = stackalloc int[256];
+            fixed (byte* pb = &bit[0], pd = &data[0], look = &lookup1[0])
+            {
+                byte* bb = pb;
+                byte* bEnd = pb + count;
+                byte* dd = pd;
+                byte v = 0;
+                while (bb < bEnd)
+                {
+                    v = *bb;
+                    bb++;
+                    byte vv = look[v];
+                    if (vv > 0)
+                        rs[*(dd + vv)]++;
+                    else
+                    {
+                        rs[*(dd + 1)]++;
+                        rs[*(dd + 2)]++;
+                        rs[*(dd + 3)]++;
+                        rs[*(dd + 4)]++;
+                        rs[*(dd + 5)]++;
+                        rs[*(dd + 6)]++;
+                        rs[*(dd + 7)]++;
+                        rs[*(dd + 8)]++;
+                    }
+                    dd += 8;
+                }
+            }
+            int[] ret = new int[256];
+            for (int i = 0; i < ret.Length; i++)
+                ret[i] = rs[i];
             return ret;
         }
 
@@ -2861,14 +2844,12 @@ namespace Tools
             Size1:
                 {
                     //int offset = look[v];
-                    rs[data[n + Lookup1[v]]]++;
+                    rs[data[n + lookup1[v]]]++;
                 }
                 n += 8;
             }
             return rs;
         }
-
-
 
     }
 }
