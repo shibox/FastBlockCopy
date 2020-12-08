@@ -12,11 +12,10 @@ namespace FastBlockCopyBenchmarks
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<FastBlockCopyBench>();
+            //var summary = BenchmarkRunner.Run<SafeCopyBenchmark>();
+            //var summary = BenchmarkRunner.Run<UnsafeCopyBenchmark>();
+            FastBenchmark.Run();
             Console.WriteLine("finish!");
-
-            //FastBlockCopyTests.Run();
-            //FastBlockCopyTests.TestCopy();
             Console.ReadLine();
         }
     }

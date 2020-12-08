@@ -28,7 +28,6 @@ namespace FastBlockCopy
                 dstOffset += _vectorSpan;
                 count -= _vectorSpan;
             }
-
             if (count > 0)
             {
                 fixed (byte* srcOrigin = src)

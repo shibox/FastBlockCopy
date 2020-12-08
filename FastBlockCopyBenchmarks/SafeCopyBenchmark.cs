@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace FastBlockCopyBenchmarks
 {
-    [SimpleJob(RunStrategy.Throughput, launchCount: 1,
-        warmupCount: 1, targetCount: 1)]
+    //[RyuJitX64Job]
+    [SimpleJob(RunStrategy.Monitoring, launchCount: 1,warmupCount: 1, targetCount: 1)]
     [RPlotExporter, RankColumn]
-    public class FastBlockCopyBench
+    public class SafeCopyBenchmark
     {
         private readonly static byte[] bufferFrom = new byte[8512];
         private readonly static byte[] bufferTo = new byte[8512];
@@ -25,12 +25,16 @@ namespace FastBlockCopyBenchmarks
         //    1024,
         //    4096,
         //    8512)]
+        //[Params(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+        //    33, 96,
+        //    508,
+        //    1024)]
         [Params(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
-            33, 96,
-            508,
-            1024,
-            4096,
-            8512)]
+            33, 56,100
+            )]
+        //[Params(96,
+        //    508,
+        //    1024,2048)]
         public int Size;
 
         [Params(10000)]
@@ -39,7 +43,8 @@ namespace FastBlockCopyBenchmarks
         [GlobalSetup]
         public void Setup()
         {
-
+            var rd = new Random(Guid.NewGuid().GetHashCode());
+            rd.NextBytes(bufferFrom);
         }
 
         [Benchmark(Baseline = true)]
@@ -56,12 +61,6 @@ namespace FastBlockCopyBenchmarks
                 FastBuffer.BlockCopy(bufferFrom, 0, bufferTo, 0, Size);
         }
 
-        //[Benchmark]
-        //public void ArrayCopy()
-        //{
-        //    Array.Copy(bufferFrom, 0, bufferTo, 0, Size);
-        //}
-
         [Benchmark]
         public void BlockCopy()
         {
@@ -72,7 +71,8 @@ namespace FastBlockCopyBenchmarks
         //[Benchmark]
         //public void VectorCopy()
         //{
-        //    FastBuffer.VectorCopy(bufferFrom, 0, bufferTo, 0, Size);
+        //    for (int i = 0; i < N; i++)
+        //        FastBuffer.VectorCopy(bufferFrom, 0, bufferTo, 0, Size);
         //}
 
 

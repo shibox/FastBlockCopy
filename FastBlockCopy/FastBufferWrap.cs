@@ -3,13 +3,14 @@
 
 using System.Runtime.InteropServices;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace FastBlockCopy
 {
     public static partial class FastBuffer
     {
 
-			
+			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -18,7 +19,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -27,7 +28,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -36,7 +37,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -45,7 +46,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -54,7 +55,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -63,7 +64,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -72,7 +73,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -81,7 +82,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -90,7 +91,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this byte[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (byte* srcOrigin = &src[srcOffset])
@@ -99,7 +100,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -108,7 +109,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -117,7 +118,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -126,7 +127,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -135,7 +136,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -144,7 +145,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -153,7 +154,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -162,7 +163,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -171,7 +172,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -180,7 +181,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this sbyte[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (sbyte* srcOrigin = &src[srcOffset])
@@ -189,7 +190,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -198,7 +199,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -207,7 +208,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -216,7 +217,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -225,7 +226,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -234,7 +235,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -243,7 +244,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -252,7 +253,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -261,7 +262,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -270,7 +271,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ushort[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (ushort* srcOrigin = &src[srcOffset])
@@ -279,7 +280,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -288,7 +289,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -297,7 +298,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -306,7 +307,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -315,7 +316,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -324,7 +325,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -333,7 +334,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -342,7 +343,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -351,7 +352,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -360,7 +361,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this short[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (short* srcOrigin = &src[srcOffset])
@@ -369,7 +370,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -378,7 +379,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -387,7 +388,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -396,7 +397,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -405,7 +406,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -414,7 +415,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -423,7 +424,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -432,7 +433,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -441,7 +442,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -450,7 +451,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this uint[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (uint* srcOrigin = &src[srcOffset])
@@ -459,7 +460,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -468,7 +469,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -477,7 +478,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -486,7 +487,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -495,7 +496,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -504,7 +505,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -513,7 +514,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -522,7 +523,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -531,7 +532,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -540,7 +541,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this int[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (int* srcOrigin = &src[srcOffset])
@@ -549,7 +550,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -558,7 +559,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -567,7 +568,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -576,7 +577,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -585,7 +586,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -594,7 +595,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -603,7 +604,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -612,7 +613,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -621,7 +622,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -630,7 +631,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this ulong[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (ulong* srcOrigin = &src[srcOffset])
@@ -639,7 +640,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -648,7 +649,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -657,7 +658,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -666,7 +667,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -675,7 +676,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -684,7 +685,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -693,7 +694,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -702,7 +703,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -711,7 +712,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -720,7 +721,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this long[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (long* srcOrigin = &src[srcOffset])
@@ -729,7 +730,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -738,7 +739,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -747,7 +748,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -756,7 +757,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -765,7 +766,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -774,7 +775,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -783,7 +784,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -792,7 +793,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -801,7 +802,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -810,7 +811,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this float[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (float* srcOrigin = &src[srcOffset])
@@ -819,7 +820,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, byte[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -828,7 +829,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, sbyte[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -837,7 +838,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, ushort[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -846,7 +847,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, short[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -855,7 +856,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, uint[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -864,7 +865,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, int[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -873,7 +874,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, ulong[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -882,7 +883,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, long[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -891,7 +892,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, float[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])
@@ -900,7 +901,7 @@ namespace FastBlockCopy
 					UnsafeBlockCopy((byte*)srcOrigin, (byte*)dstOrigin, count);
 				}
 			}
-				
+				[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this double[] src, int srcOffset, double[] dst, int dstOffset, int count)
 			{
 				fixed (double* srcOrigin = &src[srcOffset])

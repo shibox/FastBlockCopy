@@ -5,7 +5,7 @@
 <#@ import namespace="System" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Runtime.InteropServices" #>
-<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Runtime.CompilerServices" #>
 <#@ include file="GenerationConfig.ttinclude" #><# GenerateCopyrightHeader(); #>
 
 
@@ -23,7 +23,7 @@ namespace FastBlockCopy
 		foreach (var dst in supportedTypeNames)
 		{
 #>
-		
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public unsafe static void UnsafeBlockCopy(this <#= src #>[] src, int srcOffset, <#= dst #>[] dst, int dstOffset, int count)
 			{
 				fixed (<#= src #>* srcOrigin = &src[srcOffset])
