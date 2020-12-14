@@ -10,6 +10,7 @@ namespace FastBlockCopy
 {
     /// <summary>
     /// 高性能的数据拷贝对象
+    /// 
     /// </summary>
     public static partial class FastBuffer
     {
